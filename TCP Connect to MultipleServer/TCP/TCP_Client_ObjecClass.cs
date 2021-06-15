@@ -36,6 +36,7 @@ namespace TCP_Connect_to_MultipleServer
                 byte[] Ibuff = (byte[])ar.AsyncState;
                 int recv = ServerSocket.EndReceive(ar);
                 string ip = ((IPEndPoint)ServerSocket.RemoteEndPoint).Address.ToString();
+
                 if (recv == 0)
                 {
                     Disconnet();
@@ -43,6 +44,13 @@ namespace TCP_Connect_to_MultipleServer
                 }
                 else
                 {
+                    //if you want use this search 'Socket.Poll' and then use this
+                    /*bool result = client.ServerSocket.Poll(1000000, SelectMode.SelectRead);
+                    if (result)
+                    {
+                        DisconnClose(client, _ssid);
+                    }*/
+
                     //리시브
                     byte[] dataBuff = new byte[recv];
                     Array.Copy(Ibuff, dataBuff, recv);
