@@ -15,7 +15,7 @@ namespace TCP_Connect_to_MultipleServer
 {
     public class TCP_Client
     {
-        #region 멤버변수
+        #region 멤버변수 Member
         private Socket ClientSocket = null;
         public Hashtable ServerHashTable = new Hashtable();
 
@@ -24,7 +24,7 @@ namespace TCP_Connect_to_MultipleServer
         public bool isConnected = false;
         #endregion
 
-        #region 생성자
+        #region 생성자 Init
 
         public TCP_Client()
         {
@@ -33,7 +33,7 @@ namespace TCP_Connect_to_MultipleServer
 
         #endregion
 
-        #region Connect
+        #region Connect 연결
         public void DoConnect()
         {
             Connect(Common.Server1_IP, Common.Server1_Port);
@@ -87,7 +87,7 @@ namespace TCP_Connect_to_MultipleServer
 
         #endregion
 
-        #region 종료
+        #region 종료 Exit
 
         public void Disconnect()
         {
@@ -111,7 +111,7 @@ namespace TCP_Connect_to_MultipleServer
         }
         #endregion
 
-        #region 유틸
+        #region 유틸 UTIL
         public byte[] TransByte(string str)
         {
             byte[] trans = Encoding.UTF8.GetBytes(str);

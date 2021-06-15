@@ -15,12 +15,12 @@ namespace TCP_Connect_to_MultipleServer
     {
        
 
-        #region 멤버
+        #region 멤버 Member
         public TCP_Client _client = null;
         private Thread worker = null;
         #endregion
 
-        #region 생성자
+        #region 생성자 Init
         public MainForm()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace TCP_Connect_to_MultipleServer
         }
         #endregion
 
-        #region 쓰레드
+        #region 쓰레드 Thread 
 
         private void ProcessWorker()
         {
@@ -59,7 +59,7 @@ namespace TCP_Connect_to_MultipleServer
 
         #endregion
 
-        #region 연결 & 종료 버튼
+        #region 연결 & 종료 버튼  Connect & Disconnect
         private void btn_Connect_Click(object sender, EventArgs e)
         {
             try
@@ -85,7 +85,7 @@ namespace TCP_Connect_to_MultipleServer
 
         #endregion
 
-        #region 프로그램 종료
+        #region 프로그램 종료 Exit
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {

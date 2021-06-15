@@ -44,7 +44,7 @@ namespace TCP_Connect_to_MultipleServer
                 }
                 else
                 {
-                    //if you want use this search 'Socket.Poll' and then use this
+                    //if you want use this search 'Socket.Poll' and then use this . !!!
                     /*bool result = client.ServerSocket.Poll(1000000, SelectMode.SelectRead);
                     if (result)
                     {
